@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./mastermind.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Mastermind</h1>
+    </header>
+    <main>
+        <div class="info-container">
+            <i class="fa-solid fa-circle-info info-icon js-info-icon"></i>
+            <section class="rules-container d-none js-rules-container">
+                <h2 class="rules-headeing">Játékszabály</h2>
+                <div class="rules-txt">
+                    <p>A játék lényege, hogy a négy számjegyből álló titkos kódot megfejtsd.</p>
+                    <p>Tíz tippelési lehetőséged van.</p>
+                    <p>Nem kell teljesen véletlenszerűen tippelned. A gép segít egy kicsit.</p>
+                    <p>Ha az általad tippelt számsorban van olyan szám, ami a titkos kódban is szerepel, 
+                    akkor kétféle segítséget kaphatsz:</p>
+                    <p>1. Ha eltaláltál egy számot, de annak helye nem egyezik a titkos kódban lévő helyével,
+                    fekete négyzettel jelzi a gép. Ahány eltalált szám, annyi fekete négyzet.</p>
+                    <p>2. Ha a szám helye is egyezik, a fenti módon fehér négyzetként jelenik meg.</p>
+                    <p>Az el nem talált számok mennyiségét üres négyzet jelzi.</p>
+                </div>
+            </section>
+        </div>
+        <div class="start-game-container">
+            <button class="btn js-start-game">Új játék</button>
+            <div class="winn js-winn"></div>
+        </div>
+
+        <div class="guess guess-hidden js-guess">
+            <form action="#" class="guess-form js-guess-form">
+                <div class="js-err"></div>
+                <input type="number" name="guess-num" class="code-input" placeholder="1234" min="0" max="9999">
+                <button type="submit" class="btn js-start-game-btn">Tipp</button>
+            </form>
+            <div class="rounds-remains js-rounds-remains">Tipp lehetőség: 10</div>
+        </div>
+        <div class="result-container result-container-hidden js-result-container">
+            <div class="result js-result"></div>
+        </div>
+    </main>
+    <script src="./mastermind.js"></script>
+</body>
+</html>
